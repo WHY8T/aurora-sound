@@ -1,20 +1,19 @@
 "use client";
 
-import { Canvas } from "@react-three/fiber";
-import { useFrame } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Line } from "@react-three/drei";
 import { useRef } from "react";
+import type { Group } from "three";
 
 export default function Hero3D() {
-  // Create a simple audio waveform as a line
-  const points = [];
+  const points: [number, number, number][] = [];
   const waveLength = 200;
   const amplitude = 0.5;
   for (let i = 0; i < waveLength; i++) {
-    const x = (i / waveLength) * 2 - 1; // -1 to 1
+    const x = (i / waveLength) * 2 - 1;
     const y = Math.sin(x * 10) * amplitude * 0.5;
     const z = 0;
-    points.push(x, y, z);
+    points.push([x, y, z]);
   }
 
   return (
@@ -30,27 +29,20 @@ export default function Hero3D() {
   );
 }
 
-function AnimatedLine({ points }) {
-  const lineRef = useRef(null);
+function AnimatedLine({ points }: { points: [number, number, number][] }) {
+  const groupRef = useRef<Group>(null);
 
   useFrame(() => {
-    if (lineRef.current) {
-      // Subtle rotation and pulse
-      lineRef.current.rotation.y += 0.001;
-      lineRef.current.scale.set(
-        1 + Math.sin(Date.now() * 0.001) * 0.02,
-        1 + Math.sin(Date.now() * 0.001) * 0.02,
-        1
-      );
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.001;
+      const s = 1 + Math.sin(Date.now() * 0.001) * 0.02;
+      groupRef.current.scale.set(s, s, 1);
     }
   });
 
   return (
-    <Line
-      ref={lineRef}
-      color="#b45309"
-      lineWidth={2}
-      points={points}
-    />
+    <group ref={groupRef}>
+      <Line color="#b45309" lineWidth={2} points={points} />
+    </group>
   );
 }
