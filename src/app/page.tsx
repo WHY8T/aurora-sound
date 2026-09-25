@@ -12,7 +12,7 @@ export default function Home() {
       <section className="relative h-[100vh] overflow-hidden">
         {/* 3D Canvas */}
         <div className="absolute inset-0">
-          <Hero3D className="w-full h-full" />
+          <Hero3D />
         </div>
         {/* Overlay Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4">
@@ -49,7 +49,7 @@ export default function Home() {
               <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: (index) => index * 0.1 }}
+                transition={{ duration: 0.6, delay: 0 }}
                 className="flex flex-col items-center py-12 px-8 border-t border-charcoal-200/50 hover:border-charcoal-300/70 transition-colors duration-300"
               >
                 <div className="w-24 h-24 mb-6 flex items-center justify-center bg-charcoal-50/20 rounded-full">
@@ -60,7 +60,7 @@ export default function Home() {
                 <motion.h2
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.5, delay: (index) => index * 0.1 + 0.1 }}
+                  transition={{ duration: 0.5, delay: 0 + 0.1 }}
                   className="text-2xl font-bold text-charcoal-100 mb-4"
                 >
                   Studio Reference Headphones
@@ -68,7 +68,7 @@ export default function Home() {
                 <motion.p
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.5, delay: (index) => index * 0.1 + 0.2 }}
+                  transition={{ duration: 0.5, delay: 0 + 0.2 }}
                   className="text-slate-400 text-center max-w-md"
                 >
                   Experience studio-grade accuracy with our open-back reference headphones, featuring 50mm drivers and hand-matched components.
@@ -81,7 +81,7 @@ export default function Home() {
               <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: (index) => index * 0.1 + 0.3 }}
+                transition={{ duration: 0.6, delay: 0 + 0.3 }}
                 className="flex flex-col items-center py-12 px-8 border-t border-charcoal-200/50 hover:border-charcoal-300/70 transition-colors duration-300"
               >
                 <div className="w-24 h-24 mb-6 flex items-center justify-center bg-charcoal-50/20 rounded-full">
@@ -92,7 +92,7 @@ export default function Home() {
                 <motion.h2
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.5, delay: (index) => index * 0.1 + 0.4 }}
+                  transition={{ duration: 0.5, delay: 0 + 0.4 }}
                   className="text-2xl font-bold text-charcoal-100 mb-4"
                 >
                   Bookshelf Monitors
@@ -100,7 +100,7 @@ export default function Home() {
                 <motion.p
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.5, delay: (index) => index * 0.1 + 0.5 }}
+                  transition={{ duration: 0.5, delay: 0 + 0.5 }}
                   className="text-slate-400 text-center max-w-md"
                 >
                   Precision-engineered bookshelf speakers with silk dome tweeters and woven carbon fiber woofers for authentic sound reproduction.
@@ -113,7 +113,7 @@ export default function Home() {
               <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: (index) => index * 0.1 + 0.6 }}
+                transition={{ duration: 0.6, delay: 0 + 0.6 }}
                 className="flex flex-col items-center py-12 px-8 border-t border-charcoal-200/50 hover:border-charcoal-300/70 transition-colors duration-300"
               >
                 <div className="w-24 h-24 mb-6 flex items-center justify-center bg-charcoal-50/20 rounded-full">
@@ -124,7 +124,7 @@ export default function Home() {
                 <motion.h2
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.5, delay: (index) => index * 0.1 + 0.7 }}
+                  transition={{ duration: 0.5, delay: 0 + 0.7 }}
                   className="text-2xl font-bold text-charcoal-100 mb-4"
                 >
                   Integrated Amplifier
@@ -132,7 +132,7 @@ export default function Home() {
                 <motion.p
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.5, delay: (index) => index * 0.1 + 0.8 }}
+                  transition={{ duration: 0.5, delay: 0 + 0.8 }}
                   className="text-slate-400 text-center max-w-md"
                 >
                   Pure Class A amplification with discrete components and zero-feedback design for transparent, dynamic sound.
