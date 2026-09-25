@@ -4,6 +4,11 @@ import Link from "next/link";
 import NewsSection from "@/components/news";
 import Hero3D from "@/components/hero3d";
 import { motion } from "framer-motion";
+import { Headphones, Speaker, Signal } from "lucide-react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { TorusKnot } from "@react-three/drei";
+
+import { useRef } from "react";
 
 export default function Home() {
   return (
@@ -53,9 +58,7 @@ export default function Home() {
                 className="flex flex-col items-center py-12 px-8 border-t border-charcoal-200/50 hover:border-charcoal-300/70 transition-colors duration-300"
               >
                 <div className="w-24 h-24 mb-6 flex items-center justify-center bg-charcoal-50/20 rounded-full">
-                  <svg className="w-12 h-12 text-aurora-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 0l-2 2m2-2l2 2M9 16V9a3 3 0 013-3h2a3 3 0 013 3v7m-9 0c-2.76 0-5 2.24-5 5h14c0-2.76-2.24-5-5-5H9z" />
-                  </svg>
+                  <Headphones className="w-12 h-12 text-aurora-600" />
                 </div>
                 <motion.h2
                   whileInView={{ opacity: 1, y: 0 }}
@@ -85,9 +88,7 @@ export default function Home() {
                 className="flex flex-col items-center py-12 px-8 border-t border-charcoal-200/50 hover:border-charcoal-300/70 transition-colors duration-300"
               >
                 <div className="w-24 h-24 mb-6 flex items-center justify-center bg-charcoal-50/20 rounded-full">
-                  <svg className="w-12 h-12 text-aurora-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3M6 6a9 9 0 019 9c0 1.105-.266 2.148-.718 3.06M18 8a3 3 0 00-3 3v4a3 3 0 00.586 2.121l1.414-1.414A3 3 0 0018 13V8z" />
-                  </svg>
+                  <Speaker className="w-12 h-12 text-aurora-600" />
                 </div>
                 <motion.h2
                   whileInView={{ opacity: 1, y: 0 }}
@@ -117,9 +118,7 @@ export default function Home() {
                 className="flex flex-col items-center py-12 px-8 border-t border-charcoal-200/50 hover:border-charcoal-300/70 transition-colors duration-300"
               >
                 <div className="w-24 h-24 mb-6 flex items-center justify-center bg-charcoal-50/20 rounded-full">
-                  <svg className="w-12 h-12 text-aurora-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7 20h10a2 2 0 002-2V6a2 2 0 00-2-2H7a2 2 0 00-2-2v12a2 2 0 002 2z" />
-                  </svg>
+                  <Signal className="w-12 h-12 text-aurora-600" />
                 </div>
                 <motion.h2
                   whileInView={{ opacity: 1, y: 0 }}
