@@ -33,7 +33,7 @@ export default function Header() {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-charcoal-600 hover:text-charcoal-900"
+            className={`${isOpen ? 'z-[51]' : ''} text-charcoal-600 hover:text-charcoal-900`}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -42,8 +42,11 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden fixed inset-0 z-50 bg-background/90 backdrop-blur-sm">
-            <nav className="mt-16 space-y-6 px-4">
+          <div
+            className="md:hidden fixed inset-0 z-50 bg-background/90 backdrop-blur-sm"
+            onClick={() => setIsOpen(false)}
+          >
+            <nav className="mt-16 space-y-6 px-4" onClick={(e) => e.stopPropagation()}>
               <Link href="/" className="block text-xl font-bold text-charcoal-900">
                 Home
               </Link>

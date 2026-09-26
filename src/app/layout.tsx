@@ -6,6 +6,16 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "Aurora Sound - Premium Audio Equipment",
   description: "Handcrafted headphones and speakers for audiophiles and professionals",
+  icons: [
+    {
+      rel: "icon",
+      url: "/favicon.ico",
+    },
+    {
+      rel: "apple-touch-icon",
+      url: "/apple-icon.png",
+    },
+  ],
 };
 
 export default function RootLayout({
